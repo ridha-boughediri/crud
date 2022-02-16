@@ -3,7 +3,7 @@
 class DataBase{
     private $host="localhost";
     private $username="root";
-    private $dbname="shop";
+    private $dbname="rb_shop";
     private $pswd="";
 
     public function connect() {
@@ -13,8 +13,6 @@ class DataBase{
         return $pdo;
       }
 
-
-    
       
 }
 

@@ -5,7 +5,7 @@
 class Produit extends DataBase{
 
 
-    public function getArticle(){
+    public function getProduit(){
       $sql = "SELECT * FROM produit";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute();

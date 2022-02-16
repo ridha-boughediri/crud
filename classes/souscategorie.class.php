@@ -5,7 +5,7 @@
 class Souscategorie extends DataBase{
 
     public function getCateSou(){
-        $sql = "SELECT * FROM sous_categorie";
+        $sql = "SELECT * FROM sous_catégorie";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
       
@@ -23,7 +23,7 @@ class Souscategorie extends DataBase{
       }
       
       public function UpdatePost($nom_sous_catégorie) {
-        $sql = "UPDATE posts SET title = ?, body = ?, author = ? WHERE id_categorie= ?";
+        $sql = "UPDATE sous_categorie SET title = ?, body = ?, author = ? WHERE id_categorie= ?";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$nom_sous_catégorie]);
       }
@@ -31,18 +31,12 @@ class Souscategorie extends DataBase{
   
       
       public function DeleCate($id_categorie){
-        $sql= "DELETE FROM categories WHERE id_categorie=?";
+        $sql= "DELETE FROM sous_categorie WHERE id_sous_categorie=?";
         $stmt=$this->connect()->prepare($sql);
         $stmt->execute([$id_categorie]);
       }
-  
       
-
-
-
-
-
-
+    
 
 }
 

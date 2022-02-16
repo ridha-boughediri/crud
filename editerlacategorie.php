@@ -1,4 +1,15 @@
 <?php 
+
+
+require_once("./classes/dataBase.class.php");
+require_once("./classes/categorie.class.php");
+require_once("./classes/couleur.class.php");
+require_once("./classes/contance.class.php");
+require_once("./classes/produit.class.php");
+require_once("./classes/souscategorie.class.php");
+require_once("./adminhtml/slideadmin.php");
+require_once("./adminhtml/barreadmin.php");
+require_once("./adminhtml/footeradmin.php");
   require_once("./templates/header.php");
   include "./includes/class-autoload.inc.php";
 

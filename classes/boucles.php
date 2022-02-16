@@ -1,6 +1,21 @@
 <?php
 
 
+$catquery = "select * from categories"; 
+$res = mysql_query($catquery)
+
+while(list($id, $title, $description) = mysql_fetch_row($res)){
+     $subquery = "select id, title, description from subcategories where catid = {$id}";
+     $res = mysql_query($subquery);
+     echo("Category: {title} ({description})<br />");
+     while (list($sid, $stitle, $sdescription) = mysql_fetch_row($res)){
+          echo (" Subcategory: {stitle} {sdescription}<br />");
+     }
+}
+?>
+<?php
+
+
 class Categorie extends DataBase{
 
 
@@ -42,4 +57,18 @@ class Categorie extends DataBase{
 ?>
 
 
+<?php
 
+
+$catquery = "select * from categories"; 
+$res = mysql_query($catquery)
+
+while (list($id, $title, $description) = mysql_fetch_row($res)){
+     $subquery = "select id, title, description from subcategories where catid = {$id}";
+     $res = mysql_query($subquery);
+     echo("Category: {title} ({description})<br />");
+     while (list($sid, $stitle, $sdescription) = mysql_fetch_row($res)){
+          echo (" Subcategory: {stitle} {sdescription}<br />");
+     }
+}
+?>
